@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="bdb83fb1-6b34-4999-b374-c9c91bb13204" name="Changes" comment="feat: update styles">
-      <change beforePath="$PROJECT_DIR$/choose-cat/pages/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/choose-cat/pages/index.vue" afterDir="false" />
+    <list default="true" id="bdb83fb1-6b34-4999-b374-c9c91bb13204" name="Changes" comment="feat: update fact card styles">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/choose-cat/components/Carousel/Carousel.vue" beforeDir="false" afterPath="$PROJECT_DIR$/choose-cat/components/Carousel/Carousel.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,7 +72,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1635864688455</updated>
-      <workItem from="1635864690435" duration="21246000" />
+      <workItem from="1635864690435" duration="21614000" />
     </task>
     <task id="LOCAL-00001" summary="feat: add base layout">
       <created>1635864810467</created>
@@ -101,7 +102,14 @@
       <option name="project" value="LOCAL" />
       <updated>1635886332526</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="feat: update fact card styles">
+      <created>1635886608206</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1635886608206</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -123,7 +131,8 @@
     <MESSAGE value="feat: add carousel" />
     <MESSAGE value="feat: update carousel and footer" />
     <MESSAGE value="feat: update styles" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: update styles" />
+    <MESSAGE value="feat: update fact card styles" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: update fact card styles" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

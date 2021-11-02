@@ -3,7 +3,7 @@
     height="500"
     hideDelimiterBackground
     showArrowsOnHover
-    class="carousel mb-5 ma-auto"
+    class="carousel mb-5 ma-auto pa-2"
   >
     <v-carousel-item
       v-for="(image, idx) in images"

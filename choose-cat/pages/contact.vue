@@ -77,7 +77,7 @@
             for="form__input-message"
             class="form__input-label"
           >
-            your message:
+            message:
           </label>
         </v-col>
         <v-col class="col-9 form__input">
@@ -112,6 +112,30 @@
         </v-btn>
       </div>
     </v-form>
+    <v-dialog
+      v-model="dialog"
+      width="500"
+    >
+      <v-card>
+        <v-card-title class="text-h5 success">
+          Your message is send.
+        </v-card-title>
+        <v-card-text class="text-center mt-2">
+          Thank you
+        </v-card-text>
+        <v-divider />
+        <v-card-actions>
+          <v-spacer />
+          <v-btn
+            color="primary"
+            text
+            @click="dialog = false"
+          >
+            ok
+          </v-btn>
+        </v-card-actions>
+      </v-card>
+    </v-dialog>
   </v-container>
 </template>
 
@@ -125,6 +149,7 @@
     components: {Email, InputName},
     data(){
       return {
+        dialog: false,
         isValid: false,
         firstName: '',
         lastName: '',
@@ -147,7 +172,11 @@
         this.$refs.form.reset();
       },
       onSubmit() {
-        alert('Your data is send. Thank you')
+        this.showDialog();
+        this.reset();
+      },
+      showDialog() {
+        this.dialog = true;
       },
     },
   }

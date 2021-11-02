@@ -1,6 +1,6 @@
 <template>
   <v-carousel
-    height="300"
+    height="500"
     hideDelimiterBackground
     showArrowsOnHover
     class="carousel mb-5 ma-auto"
@@ -26,14 +26,13 @@
     name: "Carousel",
     data(){
       return {
-        images: [],
-      }
-    },
-    async fetch() {
-      while (this.images.length < 5) {
-        const response = await this.$axios.$get('https://thatcopy.pw/catapi/rest/');
-
-        this.images.push(response.webpurl);
+        images: [
+          'https://images.pexels.com/photos/1056251/pexels-photo-1056251.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+          'https://images.pexels.com/photos/774731/pexels-photo-774731.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+          'https://images.pexels.com/photos/2558605/pexels-photo-2558605.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+          'https://images.pexels.com/photos/96938/pexels-photo-96938.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+          'https://images.pexels.com/photos/2870353/pexels-photo-2870353.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+        ],
       }
     },
   }

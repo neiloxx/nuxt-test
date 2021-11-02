@@ -1,37 +1,15 @@
 <template>
-  <v-footer class="header-wrapper">
-    <v-app-bar
-      dense
-      class="header"
-    >
-      <v-tabs
-        class="d-flex"
-        sliderColor="white"
-      >
-        <v-tab
-          v-for="(item, idx) in links"
-          :key="idx"
-          class="header__link white--text ml-4"
-          :to="item.link"
-        >
-          {{ item.name }}
-        </v-tab>
-      </v-tabs>
-    </v-app-bar>
+  <v-footer class="justify-end">
+    <a
+      class="white--text"
+      href="https://github.com/neiloxx/nuxt-test/tree/main/choose-cat"
+    >github</a>
   </v-footer>
 </template>
 
 <script>
   export default {
     name: "Footer",
-    data() {
-      return {
-        links: [
-          {name: 'fun cats', link: '/'},
-          {name: 'contact us', link: '/contact'},
-        ],
-      }
-    },
   }
 </script>
 

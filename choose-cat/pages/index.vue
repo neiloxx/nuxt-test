@@ -17,16 +17,21 @@
       >
         Look at these facts:
       </h2>
-      <div class="d-flex flex-wrap justify-space-around">
+      <div
+        class="d-flex flex-wrap justify-space-around"
+      >
         <v-card
           v-for="(fact, idx) in facts"
           :key="idx"
-          class="ma-1 d-flex align-center justify-center"
+          class="ma-1 d-flex flex-column align-center"
           width="100%"
           height="150"
           maxWidth="300"
+          :loading="isLoading"
         >
-          <v-card-text>{{ fact.fact }}</v-card-text>
+          <v-card-text>
+            {{ fact.fact }}
+          </v-card-text>
         </v-card>
       </div>
       <v-btn
@@ -35,13 +40,8 @@
         maxWidth="200"
         @click="$fetch"
       >
-        refresh facts
+        show me new facts
       </v-btn>
-    </div>
-    <div class="adaption ma-auto">
-      <h2 class="text-center">
-        Get yourselves a pet
-      </h2>
     </div>
     <Carousel />
   </div>
@@ -54,12 +54,15 @@
     data() {
       return {
         facts: [],
+        isLoading: true,
       }
     },
     async fetch() {
+      this.isLoading = true;
       const response = await this.$axios.$get('https://catfact.ninja/facts?max_length=150&limit=6');
 
       this.facts = response.data;
+      this.isLoading = false;
     },
     methods: {
       async refresh() {
@@ -105,6 +108,16 @@
 .facts {
   max-width: 1000px;
 
+  &__title {
+    font-family: $font-body;
+  }
+
+  &__loader {
+    height: 320px
+  }
+}
+
+.books {
   &__title {
     font-family: $font-body;
   }

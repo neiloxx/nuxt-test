@@ -37,7 +37,7 @@
       <v-btn
         outlined
         class="mt-5"
-        maxWidth="200"
+        maxWidth="300"
         @click="$fetch"
       >
         show me new facts
@@ -114,12 +114,6 @@
 
   &__loader {
     height: 320px
-  }
-}
-
-.books {
-  &__title {
-    font-family: $font-body;
   }
 }
 </style>

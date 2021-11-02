@@ -1,14 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="bdb83fb1-6b34-4999-b374-c9c91bb13204" name="Changes" comment="feat: add carousel">
+    <list default="true" id="bdb83fb1-6b34-4999-b374-c9c91bb13204" name="Changes" comment="feat: update carousel and footer">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/choose-cat/components/Carousel/Carousel.vue" beforeDir="false" afterPath="$PROJECT_DIR$/choose-cat/components/Carousel/Carousel.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/choose-cat/components/Footer/Footer.vue" beforeDir="false" afterPath="$PROJECT_DIR$/choose-cat/components/Footer/Footer.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/choose-cat/pages/contact.vue" beforeDir="false" afterPath="$PROJECT_DIR$/choose-cat/pages/contact.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/choose-cat/pages/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/choose-cat/pages/index.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/choose-cat/static/contact.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/choose-cat/static/contact.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/choose-cat/static/hero-image.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/choose-cat/static/hero-image.jpg" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,7 +72,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1635864688455</updated>
-      <workItem from="1635864690435" duration="20545000" />
+      <workItem from="1635864690435" duration="21015000" />
     </task>
     <task id="LOCAL-00001" summary="feat: add base layout">
       <created>1635864810467</created>
@@ -93,7 +88,14 @@
       <option name="project" value="LOCAL" />
       <updated>1635870156089</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="feat: update carousel and footer">
+      <created>1635885880581</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1635885880581</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -113,7 +115,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="feat: add base layout" />
     <MESSAGE value="feat: add carousel" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: add carousel" />
+    <MESSAGE value="feat: update carousel and footer" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: update carousel and footer" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

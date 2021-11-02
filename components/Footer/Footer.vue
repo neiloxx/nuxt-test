@@ -2,7 +2,7 @@
   <v-footer class="justify-end">
     <a
       class="white--text"
-      href="https://github.com/neiloxx/nuxt-test/tree/main/choose-cat"
+      href="https://github.com/neiloxx/nuxt-test/"
     >github</a>
   </v-footer>
 </template>

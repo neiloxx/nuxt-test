@@ -25,7 +25,7 @@
           :key="idx"
           class="ma-1 d-flex flex-column align-center"
           width="100%"
-          height="150"
+          minHeight="150"
           maxWidth="300"
           :loading="isLoading"
         >

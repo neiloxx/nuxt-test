@@ -8,13 +8,13 @@
         <p class="hero-image__text">
           Get random cat facts via text message every day.
         </p>
-        <v-btn outlined>
-          start now
-        </v-btn>
       </div>
     </div>
-    <div class="facts d-flex flex-column ma-auto mt-5 mb-5">
-      <h2 class="facts__title text-center mb-5">
+    <div class="facts d-flex align-center flex-column ma-auto mt-5 mb-5">
+      <h2
+        id="facts"
+        class="facts__title text-center mb-5"
+      >
         Look at these facts:
       </h2>
       <div class="d-flex flex-wrap justify-space-around">
@@ -29,63 +29,84 @@
           <v-card-text>{{ fact.fact }}</v-card-text>
         </v-card>
       </div>
+      <v-btn
+        outlined
+        class="mt-5"
+        maxWidth="200"
+        @click="$fetch"
+      >
+        refresh facts
+      </v-btn>
     </div>
+    <div class="adaption ma-auto">
+      <h2 class="text-center">
+        Get yourselves a pet
+      </h2>
+    </div>
+    <Carousel />
   </div>
 </template>
 
 <script>
+  import Carousel from "../components/Carousel/Carousel.vue";
   export default {
-    data(){
+    components: {Carousel},
+    data() {
       return {
         facts: [],
       }
     },
     async fetch() {
-      const response = await this.$axios.$get('https://catfact.ninja/facts?max_length=200&limit=6');
+      const response = await this.$axios.$get('https://catfact.ninja/facts?max_length=150&limit=6');
 
       this.facts = response.data;
+    },
+    methods: {
+      async refresh() {
+        await this.fetch();
+      },
     },
   }
 </script>
 
 <style lang="scss">
-  .main {
-    width: 100%;
-    height: 100%;
+.main {
+  width: 100%;
+  height: 100%;
+}
+
+.hero-image {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+  url("@/static/hero-image.jpg") right center no-repeat;
+  height: 600px;
+  background-size: cover;
+  position: relative;
+
+  &-container {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
   }
 
-  .hero-image {
-    background: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)),
-      url("@/static/hero-image.jpg") right center no-repeat;
-    height: 600px;
-    background-size: cover;
-    position: relative;
-
-    &-container {
-      text-align: center;
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      color: white;
-    }
-
-    &__title {
-      font-family: $font-heading;
-      font-size: 80px;
-    }
-
-    &__text {
-      font-family: $font-body;
-      font-size: 30px;
-    }
+  &__title {
+    font-family: $font-heading;
+    font-size: 80px;
   }
 
-  .facts {
-    max-width: 1000px;
-
-    &__title {
-      font-family: $font-body;
-    }
+  &__text {
+    font-family: $font-body;
+    font-size: 30px;
   }
+}
+
+.facts {
+  max-width: 1000px;
+
+  &__title {
+    font-family: $font-body;
+  }
+}
 </style>

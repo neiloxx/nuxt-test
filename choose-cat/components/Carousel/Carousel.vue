@@ -3,7 +3,7 @@
     height="300"
     hideDelimiterBackground
     showArrowsOnHover
-    class="carousel"
+    class="carousel mb-5 ma-auto"
   >
     <v-carousel-item
       v-for="(image, idx) in images"
@@ -14,6 +14,7 @@
         :src="image"
         width="100%"
         height="100%"
+        cover
         class="carousel-item-image"
       />
     </v-carousel-item>
@@ -21,8 +22,6 @@
 </template>
 
 <script>
-  import * as axios from "core-js";
-
   export default {
     name: "Carousel",
     data(){
@@ -31,19 +30,17 @@
       }
     },
     async fetch() {
-      const response = await this.$axios.$get('https://api.thecatapi.com/v1/images/search', {
-        headers: {'x-api-key': '6762e144-8a07-48f8-b251-6d762c096fe3'},
-      });
+      while (this.images.length < 5) {
+        const response = await this.$axios.$get('https://thatcopy.pw/catapi/rest/');
 
-      // eslint-disable-next-line no-console
-      console.log(response[0].url);
-
-      this.images.push(response[0].url);
-    },
-    methods: {
-      getImages() {
-
-      },
+        this.images.push(response.webpurl);
+      }
     },
   }
 </script>
+
+<style lang="scss">
+  .carousel {
+    max-width: 1000px;
+  }
+</style>

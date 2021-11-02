@@ -181,7 +181,7 @@
 
 <style lang="scss">
 .contact__image {
-  background: url("https://images.pexels.com/photos/9952872/pexels-photo-9952872.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1") center center no-repeat;
+  background: url("https://images.pexels.com/photos/9952872/pexels-photo-9952872.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&dpr=1") center center no-repeat;
   height: 200px;
   background-size: cover;
   background-position-y: 70%;

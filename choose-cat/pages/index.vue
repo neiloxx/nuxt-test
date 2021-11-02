@@ -80,7 +80,7 @@
 
 .hero-image {
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-  url("@/static/hero-image.jpg") right center no-repeat;
+  url("https://images.pexels.com/photos/1521305/pexels-photo-1521305.jpeg") right center no-repeat;
   height: 600px;
   background-size: cover;
   position: relative;
